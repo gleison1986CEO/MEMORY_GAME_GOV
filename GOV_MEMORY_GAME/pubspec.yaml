@@ -1,0 +1,42 @@
+name: desenvolvimento_sustentavel_governo
+description: O desenvolvimento sustentável, sob a perspectiva governamental, envolve a integração de políticas públicas que buscam o crescimento econômico, a justiça social e a proteção ambiental. 
+
+publish_to: 'none' 
+
+version: 1.1.0+2
+
+environment:
+  sdk: '>=3.2.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  animated_background: ^2.0.0
+  provider: ^6.0.2
+  shared_preferences: ^2.0.13
+  path_provider: ^2.0.8
+  auto_size_text: ^3.0.0
+  flutter_svg: ^2.0.5
+  package_info_plus: ^5.0.1
+  url_launcher: ^6.0.20
+  page_transition: ^2.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/olive/
+    - assets/images/retro/
+    - assets/images/logo/
+    - assets/images/concentration/
+
+
+## JESUS É SENHOR
