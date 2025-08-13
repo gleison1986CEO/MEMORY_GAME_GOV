@@ -3,6 +3,7 @@ import 'package:desenvolvimento_sustentavel_governo/widgets/main_button.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -73,14 +74,38 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Text(
-                    'Desenvolvido por HouseOfCode 2025 | LTDA',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: const Color.fromARGB(255, 88, 88, 88),
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600),
+                  Align(
+                      alignment: Alignment.center,
+                      child: InkWell(
+                          onTap: () {
+                            HOUSEOFCODE();
+                          },
+                          child: Text(
+                            'Desenvolvido por HouseOfCode 2025 | LTDA',
+                            style: TextStyle(
+                                color: const Color.fromARGB(255, 88, 88, 88),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ))),
+                  const SizedBox(
+                    height: 10,
                   ),
+                  Align(
+                      alignment: Alignment.center,
+                      child: InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              '/credits',
+                            );
+                          },
+                          child: Text(
+                            'Créditos',
+                            style: TextStyle(
+                                color: const Color.fromARGB(255, 141, 141, 141),
+                                fontSize: 13,
+                                fontWeight: FontWeight.w400),
+                          ))),
                   const SizedBox(
                     height: 10,
                   ),
@@ -91,5 +116,12 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+  }
+
+  void HOUSEOFCODE() async {
+    final Uri url = Uri.parse('https://houseofcode.pro/');
+    if (!await launchUrl(url)) {
+      throw Exception('URL INEXISTENTE!');
+    }
   }
 }

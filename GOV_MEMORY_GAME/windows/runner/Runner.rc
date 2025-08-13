@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.chrisstayte" "\0"
-            VALUE "FileDescription", "concentration" "\0"
+            VALUE "CompanyName", "com.houseofcode" "\0"
+            VALUE "FileDescription", "desenvolvimento_sustentavel_governo" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "concentration" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.chrisstayte. All rights reserved." "\0"
-            VALUE "OriginalFilename", "concentration.exe" "\0"
-            VALUE "ProductName", "concentration" "\0"
+            VALUE "InternalName", "desenvolvimento_sustentavel_governo" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 com.houseofcode. All rights reserved." "\0"
+            VALUE "OriginalFilename", "desenvolvimento_sustentavel_governo.exe" "\0"
+            VALUE "ProductName", "desenvolvimento_sustentavel_governo" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

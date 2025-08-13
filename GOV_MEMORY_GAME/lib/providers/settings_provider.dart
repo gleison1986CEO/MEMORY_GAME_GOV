@@ -11,7 +11,7 @@ class SettingsProvider extends ChangeNotifier {
   MapSize _mapSize = MapSize.fourxfour;
   MapSize get mapSize => _mapSize;
 
-  GameTheme _gameTheme = GameTheme.concentration;
+  GameTheme _gameTheme = GameTheme.retro;
   GameTheme get gameTheme => _gameTheme;
 
   Difficulty _difficulty = Difficulty.easy;
@@ -30,7 +30,7 @@ class SettingsProvider extends ChangeNotifier {
       prefs.getString('mapSize') ?? MapSize.fourxfour.name,
     );
     _gameTheme = GameTheme.values.byName(
-      prefs.getString('gameTheme') ?? GameTheme.concentration.name,
+      prefs.getString('gameTheme') ?? GameTheme.retro.name,
     );
     _difficulty = Difficulty.values.byName(
       prefs.getString('difficulty') ?? 'easy',

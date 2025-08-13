@@ -42,34 +42,14 @@ class _Colors {
 
 class _GameThemeGradients {
   final Map<GameTheme, Gradient> gradients = {
-    GameTheme.concentration: const LinearGradient(
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-      colors: [
-        Color(0XFFFF9999),
-        Color(0XFFBC1B6F),
-      ],
-    ),
-    GameTheme.olive: const LinearGradient(
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-      colors: [
-        Color(0XFFD12229),
-        Color(0XFFF68A1E),
-        Color(0XFFFDE01A),
-        Color(0XFF007940),
-        Color(0XFF732982),
-        Color(0XFF24408E),
-      ],
-    ),
     GameTheme.retro: const LinearGradient(
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       colors: [
-        Color(0XFF16A9FF),
-        Color(0XFFBEE8FE),
-        Color(0XFF4CCF4D),
-        Color(0XFF855203),
+        Color.fromARGB(255, 25, 0, 255),
+        Color.fromARGB(255, 253, 253, 253),
+        Color.fromARGB(255, 255, 213, 0),
+        Color.fromARGB(255, 0, 0, 0),
       ],
       stops: [
         0.55,

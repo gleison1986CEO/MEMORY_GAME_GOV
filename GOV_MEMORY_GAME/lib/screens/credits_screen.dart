@@ -11,11 +11,11 @@ class CreditsScreen extends StatefulWidget {
 
 class _CreditsScreenState extends State<CreditsScreen> {
   PackageInfo _packageInfo = PackageInfo(
-    appName: 'Unknown',
-    packageName: 'Unknown',
-    version: 'Unknown',
-    buildNumber: 'Unknown',
-    buildSignature: 'Unknown',
+    appName: 'Desenvolvimento Sustentável Game',
+    packageName: 'com.houseofcode.memoria',
+    version: '1.0.2025',
+    buildNumber: '1.0.2025',
+    buildSignature: 'com.houseofcode.memoria',
   );
 
   Future<void> _initPackageInfo() async {
@@ -34,27 +34,63 @@ class _CreditsScreenState extends State<CreditsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Créditos')),
+      appBar: AppBar(
+        title: const Text(
+          'Sobre o Desenvolvedor',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        elevation: 0,
+      ),
       body: ListView(
         children: [
           const ListTile(
             title: Text('Devenvolvedor'),
             trailing: Text('Gleison Silveira de Freitas'),
           ),
-
           ListTile(
-            title: const Text('Versão'),
-            trailing: Text('v${_packageInfo.version}'),
+            title: const Text('Empresa'),
+            trailing: const Text('Empresa'),
+            onTap: () async {
+              final String url = "https://houseofcode.pro";
+              if (await canLaunch(url)) {
+                await launch(url);
+              }
+            },
           ),
           ListTile(
-            title: const Text('Contato'),
+            title: const Text('Linkedin'),
+            trailing: const Text('Linkedin'),
+            onTap: () async {
+              final String url =
+                  "https://www.linkedin.com/in/gleison-silveira-de-freitas-04385022b/";
+              if (await canLaunch(url)) {
+                await launch(url);
+              }
+            },
+          ),
+          ListTile(
+            title: const Text('Whatsapp'),
+            trailing: const Text('Whatsapp'),
+            onTap: () async {
+              final String url =
+                  "https://api.whatsapp.com/send/?phone=5521965408033&text=Olá, Gostaria de conversar com a empresa HouseofCode...";
+              if (await canLaunch(url)) {
+                await launch(url);
+              }
+            },
+          ),
+          ListTile(
+            title: Text('Profissional'),
+            trailing: Text('Engenheiro de Sistemas, Engenheiro de Jogos.'),
+          ),
+          ListTile(
+            title: const Text('Email'),
             trailing: const Text('devgleisonsilveira@gmail.com'),
             onTap: () async {
               final Uri params = Uri(
                 scheme: 'mailto',
                 path: 'devgleisonsilveira@gmail.com',
-                query:
-                    'subject=App Feedback (${_packageInfo.version})', 
+                query: 'subject=App Feedback (${_packageInfo.version})',
               );
 
               final String url = params.toString();
@@ -63,25 +99,6 @@ class _CreditsScreenState extends State<CreditsScreen> {
               }
             },
           ),
-          // ListTile(
-          //   title: const Text('Repo'),
-          //   trailing: const Text('github.com/ChrisStayte/Concentration'),
-          //   onTap: () async {
-          //     final Uri params = Uri(
-          //         scheme: 'https',
-          //         path: 'www.github.com/ChrisStayte/Concentration');
-
-          //     final String url = params.toString();
-          //     if (await canLaunch(url)) {
-          //       await launch(url);
-          //     }
-          //   },
-          // ),
-          // ListTile(
-          //   title: const Text('View Licenses'),
-          //   trailing: const Icon(Icons.description),
-          //   onTap: () => showLicensePage(context: context),
-          // ),
         ],
       ),
     );
