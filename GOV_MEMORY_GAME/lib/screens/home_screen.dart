@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 40,
                   ),
                   MainButton(
-                      title: 'Começar Jogo',
+                      title: 'Iniciar',
                       onTap: () {
                         HapticFeedback.mediumImpact();
                         Navigator.pushNamed(

@@ -1,1 +1,1 @@
-enum GameTheme { retro, concentration, olive  }
+enum GameTheme { retro }
